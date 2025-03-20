@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 19, 2025 at 05:19 PM
+-- Generation Time: Mar 20, 2025 at 05:25 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -33,7 +33,7 @@ CREATE TABLE `tbl_users` (
   `u_lname` varchar(50) NOT NULL,
   `u_email` varchar(50) NOT NULL,
   `u_username` varchar(50) NOT NULL,
-  `u_password` varchar(50) NOT NULL,
+  `u_password` varchar(200) NOT NULL,
   `u_role` varchar(50) NOT NULL,
   `u_status` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -44,8 +44,10 @@ CREATE TABLE `tbl_users` (
 
 INSERT INTO `tbl_users` (`u_id`, `u_fname`, `u_lname`, `u_email`, `u_username`, `u_password`, `u_role`, `u_status`) VALUES
 (1, 'test', 'test', 'test', 'test', 'test', 'test', 'test'),
-(2, 'ahak', 'sayop', 'napud', 'ako', 'nani', '', ''),
-(3, 'try', 'test', '@dihara', 'clawdue', '12345678', 'Admin', 'Active');
+(2, 'ahak', 'sayop', 'napud', 'ako', 'nani', 'User', 'Active'),
+(3, 'try', 'test', '@dihara', 'clawdue', '12345678', 'Admin', 'Active'),
+(4, 'ahaka', 'wahaha', 'secert', 'diharanglaaay', 'diharanglaaay', 'User', 'In-Active'),
+(5, 'kani', 'hash', 'testhashing@', 'hash', 'TNXUvGSDdSKbGFzNhD/Tqg==:FnMc/c6EQb1zv+XFz3PLIo5ksIvqRHSqk7sEGkiBp3A=', 'User', 'Active');
 
 --
 -- Indexes for dumped tables
@@ -65,7 +67,7 @@ ALTER TABLE `tbl_users`
 -- AUTO_INCREMENT for table `tbl_users`
 --
 ALTER TABLE `tbl_users`
-  MODIFY `u_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `u_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

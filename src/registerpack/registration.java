@@ -6,8 +6,10 @@
 package registerpack;
 
 import config.dbConnector;
+import config.hashpass;
 import loginpack.login;
 import java.awt.Color;
+import java.security.NoSuchAlgorithmException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -239,9 +241,13 @@ public class registration extends javax.swing.JFrame {
         }else{
             
             dbConnector dbc = new dbConnector();
-            if (dbc.insertData("INSERT INTO tbl_users (u_fname, u_lname, u_email, u_username, u_password, u_role, u_status) "
-            + "VALUES ('" + fname.getText() + "','" + lname.getText() + "','" + eml.getText() + "','" 
-            + uname.getText() + "','" + ps.getText() + "','" + role.getSelectedItem() + "','Inactive')")) 
+            
+            try {
+        String pass = hashpass.hashPassword(ps.getText()); // Hash password before storing
+
+        if (dbc.insertData("INSERT INTO tbl_users (u_fname, u_lname, u_email, u_username, u_password, u_role, u_status) "
+                + "VALUES ('" + fname.getText() + "','" + lname.getText() + "','" + eml.getText() + "','" 
+                + uname.getText() + "','" + pass + "','" + role.getSelectedItem() + "','Inactive')")) 
         {
             JOptionPane.showMessageDialog(null, "Inserted Successfully!");
             login lg = new login();
@@ -250,9 +256,11 @@ public class registration extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(null, "Connection Error!");
         }
+    } catch (NoSuchAlgorithmException ex) {
+        System.out.println("" + ex);
+    }
 
-            
-        }
+    }     
         
     }//GEN-LAST:event_button1ActionPerformed
 

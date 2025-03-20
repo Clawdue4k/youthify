@@ -88,7 +88,7 @@ public class userbutton extends javax.swing.JPanel {
 
         viewusers.setBackground(new java.awt.Color(223, 120, 141));
         viewusers.setForeground(new java.awt.Color(114, 114, 114));
-        viewusers.setText("Users");
+        viewusers.setText("User Forms");
         viewusers.setAutoscrolls(true);
         viewusers.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         viewusers.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -117,7 +117,7 @@ public class userbutton extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(view, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(viewusers, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

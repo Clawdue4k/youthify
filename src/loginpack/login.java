@@ -7,6 +7,8 @@ package loginpack;
 
 import admindash.adminframe;
 import config.dbConnector;
+import config.hashpass;
+import config.session;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -26,27 +28,44 @@ public class login extends javax.swing.JFrame {
     static String status;
     static String roles;
     
-    public static boolean loginAcc(String username, String password){
-        dbConnector connector = new dbConnector();
-        try{
-            String query = "SELECT * FROM tbl_users  WHERE u_username = '" + username + "' AND u_password = '" + password + "'";
-            ResultSet resultSet = connector.getData(query);
-            
-            if(resultSet.next()){
+    public static boolean loginAcc(String username, String password) {
+    dbConnector connector = new dbConnector();
+    try {
+        String query = "SELECT u_id, u_fname, u_lname, u_email, u_username, u_role, u_status, u_password FROM tbl_users WHERE u_username = '" + username + "'";
+        ResultSet resultSet = connector.getData(query);
+
+        if (resultSet.next()) {
+            String storedHashedPassword = resultSet.getString("u_password");
+
+            if (hashpass.verifyPassword(password, storedHashedPassword)) {
                 status = resultSet.getString("u_status");
                 roles = resultSet.getString("u_role");
-                
+
+                // Store user session details
+                session ses = session.getInstance();
+                ses.setUid(resultSet.getInt("u_id"));
+                ses.setFname(resultSet.getString("u_fname"));
+                ses.setLname(resultSet.getString("u_lname"));
+                ses.setEmail(resultSet.getString("u_email"));
+                ses.setUsername(resultSet.getString("u_username"));
+                ses.setRole(resultSet.getString("u_role"));
+                ses.setStatus(resultSet.getString("u_status"));
+
                 return true;
-            }else{
+            } else {
+                JOptionPane.showMessageDialog(null, "Invalid Credentials!");
                 return false;
             }
-            
-            
-        }catch (SQLException ex) {
+        } else {
+            JOptionPane.showMessageDialog(null, "User not found!");
             return false;
         }
-
+    } catch (Exception e) {
+        System.out.println("Error: " + e);
+        return false;
     }
+}
+
 
     
     @SuppressWarnings("unchecked")

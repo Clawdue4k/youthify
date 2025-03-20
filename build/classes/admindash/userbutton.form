@@ -30,7 +30,7 @@
                   <Component id="view" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                   <Component id="viewusers" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="27" max="32767" attributes="0"/>
+              <EmptySpace pref="24" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -75,7 +75,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="72" green="72" red="72" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Users"/>
+        <Property name="text" type="java.lang.String" value="User Forms"/>
         <Property name="autoscrolls" type="boolean" value="true"/>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="15" style="1"/>
