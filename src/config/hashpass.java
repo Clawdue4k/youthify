@@ -24,7 +24,7 @@ public class hashpass {
     }
 
     // Hash password with given salt using SHA-256
-    private static String hashWithSalt(String password, byte[] salt) throws NoSuchAlgorithmException {
+    public static String hashWithSalt(String password, byte[] salt) throws NoSuchAlgorithmException {
         MessageDigest md = MessageDigest.getInstance("SHA-256");
         md.update(salt); // Add salt
         byte[] hashedBytes = md.digest(password.getBytes()); // Hash password

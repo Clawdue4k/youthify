@@ -36,6 +36,7 @@ public class userframe extends javax.swing.JFrame {
         acc_role = new javax.swing.JLabel();
         acc_fname = new javax.swing.JLabel();
         acc_lname = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -65,6 +66,15 @@ public class userframe extends javax.swing.JFrame {
         acc_lname.setText("Lname");
         acc_lname.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel2.setText("USERS");
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -79,7 +89,11 @@ public class userframe extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(79, 79, 79)
                         .addComponent(acc_role)))
-                .addContainerGap(836, Short.MAX_VALUE))
+                .addContainerGap(837, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(320, 320, 320))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -90,7 +104,9 @@ public class userframe extends javax.swing.JFrame {
                     .addComponent(acc_lname))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(acc_role)
-                .addContainerGap(338, Short.MAX_VALUE))
+                .addGap(48, 48, 48)
+                .addComponent(jLabel2)
+                .addContainerGap(247, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 1000, 480));
@@ -147,6 +163,12 @@ public class userframe extends javax.swing.JFrame {
         
     }//GEN-LAST:event_formWindowActivated
 
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        usersdetails ud = new usersdetails();
+        ud.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel2MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -187,6 +209,7 @@ public class userframe extends javax.swing.JFrame {
     private javax.swing.JLabel acc_lname;
     private javax.swing.JLabel acc_role;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

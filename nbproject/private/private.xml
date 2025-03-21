@@ -3,13 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Aubrey%20Rose%20Undang/Desktop/CODE%20PURPOSES/youthify/src/admindash/createuserforms.java</file>
-            <file>file:/C:/Users/Aubrey%20Rose%20Undang/Desktop/CODE%20PURPOSES/youthify/src/admindash/adminframe.java</file>
-            <file>file:/C:/Users/Aubrey%20Rose%20Undang/Desktop/CODE%20PURPOSES/youthify/src/registerpack/registration.java</file>
-            <file>file:/C:/Users/Aubrey%20Rose%20Undang/Desktop/CODE%20PURPOSES/youthify/src/admindash/userbutton.java</file>
-            <file>file:/C:/Users/Aubrey%20Rose%20Undang/Desktop/CODE%20PURPOSES/youthify/src/loginpack/login.java</file>
-            <file>file:/C:/Users/Aubrey%20Rose%20Undang/Desktop/CODE%20PURPOSES/youthify/src/admindash/usersform.java</file>
-            <file>file:/C:/Users/Aubrey%20Rose%20Undang/Desktop/CODE%20PURPOSES/youthify/src/config/hashpass.java</file>
+            <file>file:/C:/Users/SCC-PC/Desktop/patotoya/youthify/src/config/dbConnector.java</file>
+            <file>file:/C:/Users/SCC-PC/Desktop/patotoya/youthify/src/admindash/createuserforms.java</file>
+            <file>file:/C:/Users/SCC-PC/Desktop/patotoya/youthify/src/registerpack/registration.java</file>
+            <file>file:/C:/Users/SCC-PC/Desktop/patotoya/youthify/src/userpack/changepass.java</file>
+            <file>file:/C:/Users/SCC-PC/Desktop/patotoya/youthify/src/userpack/usersdetails.java</file>
+            <file>file:/C:/Users/SCC-PC/Desktop/patotoya/youthify/src/admindash/Menu.java</file>
+            <file>file:/C:/Users/SCC-PC/Desktop/patotoya/youthify/src/config/hashpass.java</file>
+            <file>file:/C:/Users/SCC-PC/Desktop/patotoya/youthify/src/admindash/adminframe.java</file>
+            <file>file:/C:/Users/SCC-PC/Desktop/patotoya/youthify/src/userpack/userframe.java</file>
         </group>
     </open-files>
 </project-private>
